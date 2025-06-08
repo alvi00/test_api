@@ -90,3 +90,11 @@ window.addEventListener('DOMContentLoaded', () => {
     list.appendChild(li);
   });
 });
+
+
+document.getElementById('clear-all').addEventListener('click', () => {
+  if (confirm('Are you sure you want to delete all transcriptions?')) {
+    document.querySelector('ul').innerHTML = '';
+    localStorage.removeItem('bookmarks');
+  }
+});
